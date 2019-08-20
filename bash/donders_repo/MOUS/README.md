@@ -23,4 +23,6 @@
 
 		squeue -u <username>
 
-- Once the download is complete, the files will be stored in /path/to/download_destination/webdav.data.donders.ru.nl/dccn/DSC_3011020.09_236_v1
+- Once the download is complete, the files will be stored in:
+		
+		/path/to/download_destination/webdav.data.donders.ru.nl/dccn/DSC_3011020.09_236_v1
