@@ -1,4 +1,4 @@
-### Downloading the Mother of All Unification Studies (MOUS) dataset
+### Downloading the Mother of All Unification Studies (MOUS) dataset onto Biowulf
 
 [Donders Institute Repository Source](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0)
 
@@ -10,7 +10,7 @@
 
 3. Generate a swarm file of download commands using the bash script `urlgen`
 
-```bash
+```
 ./urlgen folders.txt files.txt https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0 <username> <password> /path/to/download_destination wget_commands.txt
 ```
 
@@ -38,5 +38,5 @@ squeue -u <username>
 6. Once the download is complete, the files will be stored in:
 		
 ```bash
-/path/to/download_destination/webdav.data.donders.ru.nl/dccn/DSC_3011020.09_236_v1\
+/path/to/download_destination/webdav.data.donders.ru.nl/dccn/DSC_3011020.09_236_v1
 ```
