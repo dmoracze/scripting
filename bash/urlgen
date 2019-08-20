@@ -1,0 +1,33 @@
+#!/bin/bash
+#script to generate URLs to all the subdirectories given url to parent directory
+#assumes that a username and password is required
+
+folders_names=$1
+files_names=$2
+weburl=$3
+username=$4
+pass=$5
+download_dest=$6 #specify from the root directory (ex. /data/NDAR/donders/MOUS)
+outputfile=$7
+
+prefix="-P "
+
+if [ ! -z $6 ]
+then
+	dl_path=$prefix$download_dest
+else
+	dl_path=
+fi
+
+#build wget commands for folders (will recursively fetch all files in the folders) in dataset
+while read p; do
+	urlbuilt=$weburl/$p/
+	echo "wget -r -R \"index.html*\" --no-parent \"$urlbuilt\" --user=$username --password=$pass $dl_path" >> $outputfile
+done < $folders_names
+
+
+#build wget commands for standalone files located in parent directory of dataset
+while read p; do
+	urlbuilt=$weburl/$p
+	echo "wget -r -R \"index.html*\" --no-parent \"$urlbuilt\" --user=$username --password=$pass $dl_path" >> $outputfile
+done < $files_names
