@@ -1,15 +1,17 @@
 #!/bin/bash
+
 #script to generate URLs to all the subdirectories given url to parent directory
 #assumes that a username and password is required
-#example usage: ./urlgen mus_directory.txt files.txt https://webdav.data.donders.ru.nl:443/dccn/DSC_3011020.09_236:v1 0000-0002-5836-9244@orcid.org 48332225 /data/NDAR/donders/MOUS commands_output.txt
 
-folders_names=$1 #.txt file containing names of subfolders in parent directory
-files_names=$2 #.txt file containing names of files in parent directory
-weburl=$3 #webDAV url
+#example usage: ./urlgen folders.txt files.txt <webDAV URL> <username> <password> /data/subfolder/subsubfolder wget_commands.txt
+
+folders_names=$1	#.txt file containing names of subfolders in parent directory
+files_names=$2		#.txt file containing names of files in parent directory
+weburl=$3			#webDAV url
 username=$4
 pass=$5
-download_dest=$6 #specify where to save files, indicate relative to the root directory (ex. /data/NDAR/donders/MOUS)
-outputfile=$7 #name of the output .txt file which will contain all the wget commands
+download_dest=$6 	#specify where to save files, indicate relative to the root directory (ex. /data/NDAR/donders/MOUS)
+outputfile=$7 		#name of the output .txt file which will contain all the wget commands
 
 prefix="-P "
 
