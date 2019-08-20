@@ -2,13 +2,13 @@
 #script to generate URLs to all the subdirectories given url to parent directory
 #assumes that a username and password is required
 
-folders_names=$1
-files_names=$2
-weburl=$3
+folders_names=$1 #.txt file containing names of subfolders in parent directory
+files_names=$2 #.txt file containing names of files in parent directory
+weburl=$3 #webDAV url
 username=$4
 pass=$5
-download_dest=$6 #specify from the root directory (ex. /data/NDAR/donders/MOUS)
-outputfile=$7
+download_dest=$6 #specify where to save files, indicate relative to the root directory (ex. /data/NDAR/donders/MOUS)
+outputfile=$7 #name of the output .txt file which will contain all the wget commands
 
 prefix="-P "
 
