@@ -1,8 +1,0 @@
-.bidsignore
-CHANGES
-dataset_description.json
-LICENSE.txt
-MANIFEST.txt
-participants.tsv
-README
-README.txt
