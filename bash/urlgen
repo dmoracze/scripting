@@ -1,6 +1,7 @@
 #!/bin/bash
 #script to generate URLs to all the subdirectories given url to parent directory
 #assumes that a username and password is required
+#example usage: ./urlgen mus_directory.txt files.txt https://webdav.data.donders.ru.nl:443/dccn/DSC_3011020.09_236:v1 0000-0002-5836-9244@orcid.org 48332225 /data/NDAR/donders/MOUS commands_output.txt
 
 folders_names=$1 #.txt file containing names of subfolders in parent directory
 files_names=$2 #.txt file containing names of files in parent directory
