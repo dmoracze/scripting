@@ -2,7 +2,9 @@
 
 [Donders Institute Repository Source](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0)
 
-#### Instructions for Access in the NIH HPC cluster
+-----
+
+#### Instructions for Access on the NIH HPC cluster
 
 1. Click the *Request Access* link on the repository's main page.
 
@@ -15,7 +17,7 @@
 
 -----
 
-#### Instructions for download
+#### Instructions to download the remote dataset
 
 1. Click the *Request Access* link on the repository's main page.
 
